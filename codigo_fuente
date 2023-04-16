@@ -1,0 +1,42 @@
+@author: jhonny
+"""
+
+import pandas as pd
+import numpy as np
+from sklearn.compose import ColumnTransformer
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
+
+# Cargar los datos
+data = pd.read_csv("transporte_masivo.csv")
+
+# Dividir los datos en variables independientes y dependiente
+X = data.iloc[:, :-1].values
+y = data.iloc[:, -1].values
+
+# Convertir variables categóricas en numéricas
+ct = ColumnTransformer(
+    [('one_hot_encoder', OneHotEncoder(categories='auto'), [2, 3, 5])],
+    remainder='passthrough'
+)
+X = ct.fit_transform(X)
+
+# Convertir X a un DataFrame
+X = pd.DataFrame(X)
+
+# Dividir los datos en conjunto de entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Entrenar el modelo de regresión lineal
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Evaluar el modelo con el conjunto de prueba
+score = model.score(X_test, y_test)
+print(f"Score del modelo: {score}")
+
+# Imprimir los tipos de datos de las columnas
+print(X.dtypes)
