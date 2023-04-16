@@ -1,0 +1,16 @@
+﻿Fecha,Hora,Origen,Destino,Duración,Tipo de vehículo,Capacidad del vehículo,Precio
+1/1/22,7:30,Estación A,Estación B,30,Autobús,50,3.50
+1/2/22,8:15,Estación B,Estación C,45,Tren,200,5.00
+1/3/22,9:00,Estación C,Estación D,20,Tranvía,80,2.00
+1/4/22,10:00,Estación D,Estación E,60,Autobús,50,3.50
+1/5/22,12:00,Estación E,Estación F,45,Tren,200,5.00
+1/6/22,8:30,Estación F,Estación G,25,Autobús,50,3.50
+1/7/22,7:45,Estación G,Estación H,40,Tren,200,5.00
+1/8/22,10:30,Estación H,Estación I,30,Tranvía,80,2.00
+1/9/22,11:45,Estación I,Estación J,15,Autobús,50,3.50
+1/10/22,14:00,Estación J,Estación K,50,Tren,200,5.00
+1/11/22,16:30,Estación K,Estación L,35,Autobús,50,3.50
+1/12/22,18:00,Estación L,Estación M,30,Tren,200,5.00
+1/13/22,10:45,Estación M,Estación N,10,Tranvía,80,2.00
+1/14/22,12:15,Estación N,Estación O,25,Autobús,50,3.50
+1/15/22,13:30,Estación O,Estación P,20,Tren,200,5.00
